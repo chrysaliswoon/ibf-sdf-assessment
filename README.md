@@ -22,54 +22,51 @@
 
 Web server should accept the following command line options when starting:
 
-- [] 
+- [] if port is not specified, it will default to port 3000
+  
 ```
 --port <port number>
 ```
 
-if port is not specified, it will default to port 3000
-
-- [] 
+- [] one or more directories where the HTML, CSS and JS files and images are stored. If not specified, default to static directory in the current path
+  
 ```
 --docRoot <colon delimited list of directories>
 ```
 
-one or more directories where the HTML, CSS and JS files and images are stored. If not specified, default to static directory in the current path
+- [] start the server on port 3000; docRoot directory is ./target
 
-- [] 
 ```
 java -cp
 ```
 
-start the server on port 3000; docRoot directory is ./target
+- [] start the server on port 8080; docRoot directory is ./target
 
-- []
 ```
 java -cp ./myserver.jar --port 8080
 ```
 
-start the server on port 8080; docRoot directory is ./target
 
-- []
+- [] start the server on port 3000; the docRoot directories will be ./target and /opt/tmp/www
+
 ```
  java -cp ./myserver.jar --docRoot ./target:/opt/tmp/www
 ```
 
-start the server on port 3000; the docRoot directories will be ./target and /opt/tmp/www
 
-- []
+- [] start the server on port 8080; docRoot directories will be ./target and /opt/tmp/www
+
 ```
  java -cp ./myserver.jar --port 8080 --docRoot 
  ./target:/opt/tmp/www 
 ```
 
-start the server on port 8080; docRoot directories will be ./target and /opt/tmp/www
 
 ### Task 4
 
 When HTTP server starts, perform the following:
 
-- [] Open a TCP connection and listen on the port from the port option
+- [X] Open a TCP connection and listen on the port from the port option
 - [] Check each of the docRoot path; for each path verify that
   - [] path exists
   - [] path is a directory
@@ -155,3 +152,24 @@ Content-Type: image/png\r\n
 - [] Run HTTP server and test if can access the HTML document from the browser:
   - [] http://localhost:<port>
   - [] http://localhost:<port>/index.html
+
+
+
+## ServerSocket API
+The ServerSocketclass is used to implement a server program. Here are the typical steps involve in developing a server program:
+1. Create a server socket and bind it to a specific port number
+
+2. Listen for a connection from the client and accept it. This results in a client socket is created for the connection.
+
+3. Read data from the client via an InputStream obtained from the client socket.
+
+4. Send data to the client via the client socket’s OutputStream.
+
+5. Close the connection with the client.
+
+The steps 3 and 4 can be repeated many times depending on the protocol agreed between the server and the client.
+The steps 1 to 5 can be repeated for each new client. And each new connection should be handled by a separate thread.
+
+
+### Resources:
+- https://www.codejava.net/java-se/networking/java-socket-server-examples-tcp-ip
