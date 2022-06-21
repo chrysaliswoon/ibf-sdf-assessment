@@ -173,3 +173,4 @@ The steps 1 to 5 can be repeated for each new client. And each new connection sh
 
 ### Resources:
 - https://www.codejava.net/java-se/networking/java-socket-server-examples-tcp-ip
+- https://javarevisited.blogspot.com/2015/06/how-to-create-http-server-in-java-serversocket-example.html#axzz7WpITPG4F

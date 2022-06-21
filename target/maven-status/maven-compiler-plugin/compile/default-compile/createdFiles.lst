@@ -1,6 +1,5 @@
-assessment/core/HttpClient.class
 assessment/core/HttpWriter.class
+assessment/core/Main.class
 assessment/core/HttpClientConnection.class
 assessment/core/HttpServer.class
-assessment/core/ClientMain.class
-assessment/core/ServerMain.class
+assessment/core/HttpWorker.class

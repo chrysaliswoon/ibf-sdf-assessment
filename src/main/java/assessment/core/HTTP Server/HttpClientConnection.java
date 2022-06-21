@@ -19,28 +19,33 @@ public class HttpClientConnection {
     private OutputStream os;
     private DataOutputStream dos;
 
+
     public HttpClientConnection(Socket sock) throws IOException {
         is = sock.getInputStream();
-        dis = new DataInputStream(is); // For incoming stream
+        dis = new DataInputStream(is);
         os = sock.getOutputStream();
-        dos = new DataOutputStream(os); // For outgoing stream
+        dos = new DataOutputStream(os);
     }
 
-    // ? Wait for response from server
     public String read() throws IOException {
         return dis.readUTF();
     }
 
-    //? 
     public void write(String msg) throws IOException {
         dos.writeUTF(msg);
-        dos.flush(); // To make sure the data sends
+        dos.flush();
     }
-    
 
-    //? Close the streams & socket
     public void close() throws IOException {
-        is.close();
-        os.close();
+        try {
+            dis.close();
+            is.close();
+            dos.close();
+            is.close();
+            
+        } catch (Exception e) {
+           System.out.println(e);
+        }
+
     }
 }
