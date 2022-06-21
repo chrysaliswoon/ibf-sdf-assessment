@@ -1,6 +1,8 @@
 package assessment.core;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ServerMain 
 {
@@ -8,7 +10,14 @@ public class ServerMain
     {
         Integer PORT = 3000;
 
-        HttpServer server = new HttpServer();
-        server.startServer(PORT);
+        //? Create a Thread Pool
+        ExecutorService threadPool = Executors.newFixedThreadPool(3);
+
+        
+        // while (true) {
+            //? Create the Server
+            HttpServer server = new HttpServer();
+            server.startServer(PORT);
+        // }
     }
 }

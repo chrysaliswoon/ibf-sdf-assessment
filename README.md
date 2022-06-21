@@ -76,9 +76,9 @@ When HTTP server starts, perform the following:
 
 ### Task 5
 
-- [] Create a thread pool with 3 threads
-- [] Server will listen on the specified port
-- [] Server will accept incoming connections from the browser
+- [X] Create a thread pool with 3 threads
+- [X] Server will listen on the specified port
+- [X] Server will accept incoming connections from the browser
 - [] When new connection is established, this connection should be handled by a thread from the threadpool.
 - [] Main control thread (server) should go back to waiting for new incoming connections
 
