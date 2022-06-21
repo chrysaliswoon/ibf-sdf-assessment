@@ -95,13 +95,15 @@ Client thread (handling the client connection) should perform the following task
 ### Task 7
 
 - [X] Create directory called static at the root of project folder
+
 - [] Write a HTML document called index.html with the following content:
   - [X] Any PNG image. This PNG image must be in the static folder. Reference the image as <img href="/mypic.png"> 
-  - [X] Header line <h1> with any text
+  - [X] Header line (h1) with any text
   - [X] Link to another HTML document in static directory
   - [X] Any text resources (e.g. CSS, JS) referenced by index.html should also be placed in the static directory
-  - [] Image, text and link must be positioned in the center (horizontally and vertically) of the browser's viewport(window)
-  - [] Image should remain at the center when the browser's window is resized
-  - Run HTTP server and test if can access the HTML document from the browser:
-    - [] http://localhost:<port>
-    - [] http://localhost:<port>/index.html
+  - [X] Image, text and link must be positioned in the center (horizontally and vertically) of the browser's viewport(window)
+  - [X] Image should remain at the center when the browser's window is resized
+  
+- [] Run HTTP server and test if can access the HTML document from the browser:
+  - [] http://localhost:<port>
+  - [] http://localhost:<port>/index.html
