@@ -150,8 +150,8 @@ Content-Type: image/png\r\n
   - [X] Image should remain at the center when the browser's window is resized
   
 - [] Run HTTP server and test if can access the HTML document from the browser:
-  - [] http://localhost:<port>
-  - [] http://localhost:<port>/index.html
+  - [] http://localhost:3000
+  - [] http://localhost:3000/index.html
 
 
 

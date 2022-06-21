@@ -73,8 +73,10 @@ public class HttpServer {
 
         } catch (Exception e) {
             System.out.println(e);
+            System.exit(1);
         } finally {
             System.out.println("Server has been shutdown!");
+
         }
 
     }

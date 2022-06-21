@@ -40,7 +40,7 @@
               <manifest>
                 <addClasspath>true</addClasspath>
                 <classpathPrefix>lib/</classpathPrefix>
-                <mainClass>assessment.core.Main</mainClass>
+                <mainClass>assessment.core.ibf.Main</mainClass>
               </manifest>
             </archive>
           </configuration>
