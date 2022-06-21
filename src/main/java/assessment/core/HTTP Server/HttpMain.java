@@ -1,5 +1,5 @@
 package assessment.core;
 
-public class Main {
+public class HttpMain {
     
 }

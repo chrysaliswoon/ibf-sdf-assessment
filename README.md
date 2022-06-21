@@ -9,7 +9,7 @@
 
 **Task 2**
 
-HTTP Folder
+**HTTP Folder**
 
 - [X] Main: Web server's main class
 - [X] HttpServer: Main web server class
