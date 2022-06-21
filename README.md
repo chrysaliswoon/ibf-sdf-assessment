@@ -91,6 +91,54 @@ When HTTP server starts, perform the following:
 Client thread (handling the client connection) should perform the following tasks:
 - [] Read the first line from the incoming request and perfom one of the following actions:
 
+**Action 1 - Not a GET Method**
+
+- [] If the request method is NOT a GET method, it will send the following response back to the client:
+```
+HTTP/1.1 405 Method Not Allowed \r\n
+\r\n
+<method name> not supported\r\n
+```
+- [] Close the connection and exit the thread 
+
+**Action 2 - Resources does not exist**
+
+- [] If the requested resource is not found, send the following back to the client:
+
+```
+HTTP/1.1 404 Not Found\r\n
+\r\n
+<resource name> not found\r\n
+```
+
+- [] Close the connection and exit the thread 
+- [] If resource name is /, replace it with /index.html before performing the file search
+
+**Action 3 - Resource exist**
+
+- [] If resource is found in any of the docRoot directories, send the resource contens as bytes back to the client in the following response
+
+```
+HTTP/1.1 200 OK\r\n
+\r\n
+<resource contents as bytes>
+```
+
+- [] Close the connection and exit the thread 
+
+**Action 4 - Resources exist and is a PNG image**
+
+- [] If the resource exits and the name ends with a .png suffix, then the resource is a PNG image. Send the following response back to the client
+
+```
+HTTP/1.1 200 OK\r\n
+Content-Type: image/png\r\n
+\r\n
+<resource contents as bytes>
+```
+
+- [] Close the connection and exit the thread 
+
 
 ### Task 7
 
