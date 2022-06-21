@@ -96,7 +96,7 @@ Client thread (handling the client connection) should perform the following task
 
 - [X] Create directory called static at the root of project folder
 
-- [] Write a HTML document called index.html with the following content:
+- [X] Write a HTML document called index.html with the following content:
   - [X] Any PNG image. This PNG image must be in the static folder. Reference the image as <img href="/mypic.png"> 
   - [X] Header line (h1) with any text
   - [X] Link to another HTML document in static directory
